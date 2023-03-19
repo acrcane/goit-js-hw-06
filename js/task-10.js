@@ -11,17 +11,24 @@ const input = document.querySelector('input');
 // console.log(destroyBtn);
 
 createBtn.addEventListener('click', createBoxes)
+destroyBtn.addEventListener('click', destroyBoxes)
 
 function createBoxes(amount){
-  let widthCounter = 0
-  amount = parseInt(input.value)
-  console.log(amount);
-  for(let i = 0; i < amount; i++){
-    const createdDivs = document.createElement('div')
-    createdDivs.textContent = i
-    widthCounter += 10
-    createdDivs.style.width = widthCounter + 'px'
-    createdDivs.style.backgroundColor = getRandomHexColor()
-    mainContainer.appendChild(createdDivs)
+    let widthCounter = 0
+    amount = parseInt(input.value)
+    console.log(amount);
+    for(let i = 0; i < amount; i++){
+      const createdDivs = document.createElement('div')
+      createdDivs.classList.add('new')
+      createdDivs.textContent = i
+      widthCounter += 10
+      createdDivs.style.width = widthCounter + 'px'
+      createdDivs.style.backgroundColor = getRandomHexColor()
+      mainContainer.appendChild(createdDivs)
   }
+}
+
+function destroyBoxes(){
+  const newDivs = document.querySelectorAll('.new')
+  newDivs.forEach((elem) => elem.remove())
 }
