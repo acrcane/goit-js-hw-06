@@ -14,3 +14,6 @@ ingredients.forEach((item) => {
   createList.textContent = item
   orderedList.appendChild(createList)
 })
+// createList.classList.add('item')
+// createList.textContent = item
+// orderedList.appendChild(createList)

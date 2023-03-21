@@ -20,9 +20,13 @@ function createBoxes(amount){
     for(let i = 0; i < amount; i++){
       const createdDivs = document.createElement('div')
       createdDivs.classList.add('new')
+      // const divWidth = createdDivs.style.width
+      // const divHeight = createdDivs.style.height
       createdDivs.textContent = i
       widthCounter += 10
       createdDivs.style.width = widthCounter + 'px'
+      // divWidth += widthCounter + 'px'
+      // divHeight += widthCounter + 'px'
       createdDivs.style.backgroundColor = getRandomHexColor()
       mainContainer.appendChild(createdDivs)
   }

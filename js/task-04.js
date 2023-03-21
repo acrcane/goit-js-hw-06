@@ -5,11 +5,11 @@ const fild = document.querySelector('#value')
 let counterValue = 0
 
 function getIncrement(){
-    counterValue ++
+    counterValue +=1
     fild.textContent = counterValue
 }
 function getdecrement(){
-    counterValue --
+    counterValue -=1
     fild.textContent = counterValue
 }
 
