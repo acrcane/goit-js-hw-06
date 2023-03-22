@@ -14,10 +14,11 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
+let imagesHTML = '';
 
 images.forEach((image) => {
-  gallery.style.display = 'flex'
-  const listForImage = document.createElement('li')
-  gallery.appendChild(listForImage)
-  const imageAdd = listForImage.insertAdjacentHTML('beforeend', `<img src='${image.url}' alt='${image.alt}' width='300'>`)
-})
+  imagesHTML += `<li><img src="${image.url}" alt="${image.alt}" width="300"></li>`;
+});
+
+gallery.style.display = 'flex';
+gallery.insertAdjacentHTML('beforeend', imagesHTML);
