@@ -14,11 +14,11 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-let imagesHTML = '';
+let imagesHtml = '';
 
 images.forEach((image) => {
-  imagesHTML += `<li><img src="${image.url}" alt="${image.alt}" width="300"></li>`;
+  imagesHtml += `<li><img src="${image.url}" alt="${image.alt}" width="300"></li>`;
 });
 
 gallery.style.display = 'flex';
-gallery.insertAdjacentHTML('beforeend', imagesHTML);
+gallery.insertAdjacentHTML('beforeend', imagesHtml);
